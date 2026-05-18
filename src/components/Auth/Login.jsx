@@ -55,7 +55,6 @@ const Login = ({handleLogin})=>{
                          />
                          <label className="text-xs">Remember me</label>
                      </div>
-                     <p className="text-xs">Forgot Password?</p>
                 </div>
 
                 <button className="m-5 bg-blue-900 rounded-xl w-25 text-white p-0.5 hover:bg-blue-800" >Submit</button>
