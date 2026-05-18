@@ -76,7 +76,7 @@ src/
 
 ---
 
-# ⚙️ Installation
+# Installation
 
 Clone the repository:
 
