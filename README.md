@@ -117,12 +117,8 @@ npm run dev
 
 # Live Demo
 
-Add your Vercel deployment link here after deployment.
-
-Example:
-
 ```bash
-https://employee-management-system.vercel.app
+https://employee-management-system-ten-iota.vercel.app/
 ```
 
 ---
