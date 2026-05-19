@@ -29,7 +29,7 @@ function App() {
       return
     }
 
-    const employee = authData.find((e)=> e.email == email && e.password == password)
+    const employee = authData?.find((e)=> e.email == email && e.password == password)
 
       if (employee) {
         setUser('employee')
