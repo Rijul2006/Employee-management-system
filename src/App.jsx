@@ -15,20 +15,10 @@ function App() {
     if (isloggedInUser) {
       const userData = JSON.parse(isloggedInUser)
       setUser(userData.role)
-      setLoggedInUserData(userData.data ?? null)
+      setLoggedInUserData(userData.data)
     }
   }, [])
 
-  useEffect(() => {
-    if (user === 'employee' && loggedInUserData && Array.isArray(authData)) {
-      const updatedEmployee = authData.find(
-        (e) => e.id === loggedInUserData.id
-      )
-      if (updatedEmployee && updatedEmployee.tasks !== loggedInUserData.tasks) {
-        setLoggedInUserData(updatedEmployee)
-      }
-    }
-  }, [authData, user, loggedInUserData])
 
   const handleLogin = (email, password, rememberMe) => {
     if (email === 'admin@gmail.com' && password === '123') {
@@ -39,10 +29,7 @@ function App() {
       return
     }
 
-    if (Array.isArray(authData) && authData.length > 0) {
-      const employee = authData.find(
-        (e) => e.email === email && e.password === password
-      )
+    const employee = authData.find((e)=> e.email == email && e.password == password)
 
       if (employee) {
         setUser('employee')
@@ -55,7 +42,7 @@ function App() {
         }
         return
       }
-    }
+    
 
     window.alert('Invalid Credentials')
   }
